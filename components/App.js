@@ -5,13 +5,9 @@ import HeroPicker from './HeroPicker';
 export default class App extends React.Component {
   render() {
 
-      heroPicker = heroes.map(function(hero) {
-          return <HeroPicker name={hero.name} heroClass={hero.heroClass} abilities={hero.abilities.join(", ")} />
-      })
-
     return (
       <View style={styles.container}>
-        {heroPicker}
+        <HeroPicker heroes={heroes} />
 
       </View>
     );
@@ -20,7 +16,6 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-      padding: 40,
     flex: 1,
     backgroundColor: 'lightgrey',
     flexDirection: "row",
@@ -41,10 +36,10 @@ const heroes = [
     },
     {
         name: "Natasha",
-        heroClass: "Ranger",
+        heroClass: "Wizard",
         abilities: [
-            "Trap",
-            "Pure Shot"
+            "Intuition",
+            "Spell Shield"
         ]
     }
 

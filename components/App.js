@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'lightgrey',
-    flexDirection: "row",
+    // flexDirection: "row"
     // alignItems: "center",
     // justifyContent: 'space-between'
   }
@@ -41,6 +41,23 @@ const heroes = [
             "Intuition",
             "Spell Shield"
         ]
+    },
+    {
+        name: "Georgina",
+        heroClass: "Swamp Witch",
+        abilities: [
+            "Herbal Remedy",
+            "Poison Shot"
+        ]
+    },
+    {
+        name: "Blair",
+        heroClass: "Red Priestess",
+        abilities: [
+            "Consecrate",
+            "Heal"
+        ]
     }
+
 
 ]

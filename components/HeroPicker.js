@@ -36,9 +36,9 @@ export default class HeroPicker extends React.Component {
 
                 let heroIndex = heroPicker.state.selectedHeroes.indexOf(hero);
 
-                if (heroIndex === -1) {
+                if (heroIndex === -1 && numChosen > 0) {
                     heroPicker.setState({selectedHeroes: [...heroPicker.state.selectedHeroes, hero]})
-                } else {
+                } else if (heroIndex > -1) {
                     let selectedHeroes = heroPicker.state.selectedHeroes;
                     selectedHeroes.splice(heroIndex, 1);
                     heroPicker.setState({selectedHeroes: selectedHeroes})

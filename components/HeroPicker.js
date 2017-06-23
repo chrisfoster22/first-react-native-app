@@ -53,14 +53,12 @@ export default class HeroPicker extends React.Component {
           selectText = numChosen === 0 ? <Text>Start!</Text> : <Text>Choose {numChosen} more heroes!</Text>
       })()
 
-      console.log(selectText);
-
         return(
-            <View>
+            <View style={styles.heroPicker}>
                 <View style={styles.container}>
                     {heroes}
                 </View>
-                <View>
+                <View style={styles.selectText}>
                     {selectText}
                 </View>
             </View>
@@ -70,6 +68,13 @@ export default class HeroPicker extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    heroPicker: {
+        flex: 1
+    },
+    selectText: {
+        flex: 1,
+        alignItems: "center"
+    },
     container: {
         flex: 1,
         flexDirection: "row",
